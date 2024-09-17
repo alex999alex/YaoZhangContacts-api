@@ -19,41 +19,41 @@ router.get('/all', (req, res) => {
 
 // to-do: add post, put, and delete routers
 
-router.post('/create', (req, res) => {
-    const id = req.params.id;
-    res.send('Create a new contact ' + id);
-  });
-
-
 // router.post('/create', (req, res) => {
-//     const newContact = req.body;
-//     res.send('Create a new contact: ' + newContact);
+//     const id = req.params.id;
+//     res.send('Create a new contact ' + id);
 //   });
 
 
-router.put('/update', (req, res) => {
-    const id = req.params.id;
-    res.send('Update a new contact ' + id);
+router.post('/create', (req, res) => {
+    const newContact = req.body;
+    res.send('Create a new contact: ' + newContact);
   });
 
 
-// router.put('/update/:id', (req, res) => {
+// router.put('/update', (req, res) => {
 //     const id = req.params.id;
-//     const updateContact = req.body;
-//     res.send('Update a new contact with ID: ' + id  + updateContact);
+//     res.send('Update a new contact ' + id);
 //   });
 
 
-router.delete('/delete', (req, res) => {
+router.put('/update/:id', (req, res) => {
     const id = req.params.id;
-    res.send('Delete a new contact ' + id);
+    const updateContact = req.body;
+    res.send('Update a new contact with ID: ' + id  + updateContact);
   });
 
 
-// router.delete('/delete/:id', (req, res) => {
+// router.delete('/delete', (req, res) => {
 //     const id = req.params.id;
-//     res.send('Delete a contact with ID: ' + id);
+//     res.send('Delete a new contact ' + id);
 //   });
+
+
+router.delete('/delete/:id', (req, res) => {
+    const id = req.params.id;
+    res.send('Delete a contact with ID: ' + id);
+  });
 
   
   
